@@ -11,6 +11,8 @@
     <link href="CSS/section.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
     <link href="CSS/from.css" rel="stylesheet">
+    <link href="CSS/header.css" rel="stylesheet">
+    <link href="CSS/list.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
@@ -18,18 +20,19 @@
     <script defer src="JS/script.js"></script>
 
 </head>
+
 <body class="page">
-    <h1>Lista zadań</h1>
+    <h1 class="header">Lista zadań</h1>
     <section class="section">
         <h2 class="section__header">Dodaj nowe zadanie</h2>
-        <form class="js-form form"> 
+        <form class="js-form form">
             <input class="js-newTask form__input" placeholder="Co jest do zrobienia ?" autofocus>
             <button class="form__clickButton">Dodaj zadanie</button>
         </form>
     </section>
     <section>
         <h2 class="section__header">Lista zadań</h2>
-            <ul class="js-tasks"></ul>
+        <ul class="list js-tasks"></ul>
     </section>
 
 </body>

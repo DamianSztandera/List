@@ -1,11 +1,5 @@
-.section {
-}
-.article__title {
-    margin: 20px;
-}
 .section__header { 
-margin : 10px 100px 2px 100px;
+margin : 0 100px 2px 100px;
 padding: 20px;
 background-color: white;
 }
-

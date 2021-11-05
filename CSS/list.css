@@ -1,0 +1,49 @@
+.list {
+    padding: 0px 50px 20px;
+    margin: 0 100px 2px 100px;
+    background-color: white;
+}
+
+.list__item {
+    list-style-type: none;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    border-bottom: 2px solid #eee;
+    padding: 10px;
+    display: grid;
+    grid-gap: 11px;
+}
+
+.list__taskContent--done {
+    text-decoration: line-through;
+}
+
+.list__button {
+    border: none;
+    height: 30px;
+    width: 30px;
+    justify-self: center;
+    background-color: hsl(120, 88%, 27%);
+    color: white;
+}
+
+.list__button:hover {
+    background-color: hsl(121, 88%, 32%);
+    cursor: pointer;
+}
+
+.list__button--remove {
+    background-color: hsl(0, 94%, 58%);
+}
+
+.list__button--remove:hover {
+    background-color: hsl(0, 94%, 63%);
+}
+
+.list__button--remove:active {
+    background-color: hsl(0, 94%, 68%);
+}
+
+.list__button:active {
+    background-color: hsl(121, 88%, 37%);
+}

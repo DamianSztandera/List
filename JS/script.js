@@ -1,15 +1,6 @@
 {
-    const tasks = [
-        {
-            content: "Wysłać umowę",
-            done: true,
-        },
-        {
-            content: "Zapisać umowę",
-            done: false,
-        },
-    ];
-    const addNewTask = (newTaskContent) =>{
+    const tasks = [];
+    const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
@@ -50,11 +41,17 @@
 
         for (const task of tasks) {
             htmlString += `
-               <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-               <button class="js-done">zrobione?</button>
-               <button class="js-remove">usuń</button>
-               ${task.content}
-               </li>   
+            <li class="list__item">
+                <button class="list__button js-done">
+                    ${task.done ? "✓" : ""}
+                </button>
+                <span class="list__taskContent ${task.done ? "list__taskContent--done" : ""}">
+                    ${task.content}
+                </span>
+                <button class="list__button list__button--remove js-remove">	
+                    🗑
+                </button>
+            </li>
             `;
         }
 
@@ -63,18 +60,18 @@
         bindEvents();
     };
 
-    
+
 
     const onFromSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        
-        if(newTaskContent === "") {
-            return;
-        } 
 
-        addNewTask(newTaskContent); 
+        if (newTaskContent === "") {
+            return;
+        }
+
+        addNewTask(newTaskContent);
     }
 
     const init = () => {
